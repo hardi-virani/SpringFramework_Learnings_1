@@ -24,12 +24,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        //GPT : only doubt is what we created? Container or the told the spring to create the object and just because told spring to create and manage it, it by default create the container to store it, or it is already present in springframework.
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml"); // Step 7 : Created the object and reaching to the container.
+        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml"); // Step 7 : Created the spring container. And the configuration xml file is mentioned in the container ("Spring.xml"). // And after editing xml file, spring knows what obj it needs from which class.
 
         // Communicated with the container. Just what we did in springBoot.
-        Alien obj = (Alien) context.getBean("alien"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
+        Alien obj = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
         obj.code();
 
     }
@@ -46,3 +45,6 @@ public class App
 // Step 1 : we create XML file but where?
 // Now since, we are using classpathXMLapplicationContext() it will look for classpath. And in classpath there is a main and let's create a folder called Resource. So it will look for it. And in that create XML file. I have name is Spring.xml.
 // Now mention that in classpathXMLapplicationContext("_yourxmlfilename_");
+// Go to your created XML file. (make sure that resource folder the part of main folder)
+
+// SO, these are the things that we have to do, just to print one line of code in spring. WOW!!!

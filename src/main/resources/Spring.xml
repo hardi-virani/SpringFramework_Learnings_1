@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--        6. This is the defination of the bean tag <bean>-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 1. YAY!! you made it!! WELCOME and learn more.-->
+
+
+    <!-- 2. This is the place where we have to mention the bean. (beans are the objects that is managed by the springFramework in IOC container).-->
+
+    <!--3. We have to tell our spring what object we want that means ID and of what class so we need the classname and the package of it-->
+    <!--4. here is the ID is what is mention in main class.-->
+
+    <!--5. Okay, so we can use the tag but we also need to use the tags that spring understands and for that we need the definations. And we can get that from browser. Just search spring bean configuration and we can get that from documentation xml-->
+
+    <bean id = "thisIstheID" class = "com.star.Alien"> </bean>
+
+
+</beans>
+
