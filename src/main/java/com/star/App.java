@@ -9,6 +9,7 @@
 // Step 5 : In future we will work with MVC and JPA, for that we need to get more other dependencies, there are just we need to work with DI using springframework, we need these dependencies only.
 // Step 6 : Now back to our topic of making the container, and for that we already know from springBoot that we need ApplicationContext because that will be our way to reach to IOC container.
 // Step 7 : Check the code comment.
+// Step 8 : After doing all these we still get the error, check below.
 
 package com.star;
 
@@ -36,3 +37,12 @@ public class App
 
 
 // Error : BreanFactory not initialized or already closed.....
+
+// So, from the error is shows. "Alien obj = (Alien) context.getBean("alien");" it has problem with this line. Not above that. Spring was not able to find this object in the container.
+// So, we have to tell spring that it is your responsibility to manage this Alien class.
+// And there are many ways to talk to our spring. 1. Java based configuration, 2. XML , 3. Annotations
+// We will use XML here.
+
+// Step 1 : we create XML file but where?
+// Now since, we using classpathXMLapplicationContext() it will look for classpath. And in classpath there is a main and let's create a folder called Resource. So it will look for it. And in that create XML file. I have name is Spring.xml.
+//
