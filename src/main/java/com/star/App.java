@@ -25,7 +25,7 @@ public class App
     public static void main( String[] args )
     {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml"); // Step 7 : Created the spring container. And the configuration xml file is mentioned in the container ("Spring.xml"). // And after editing xml file, spring knows what obj it needs from which class.
+        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml"); // Step 7 : Created the spring container. And the configuration xml file is mentioned in the container ("Spring.xml"). // 11. And after editing xml file, spring knows what obj it needs from which class.
 
         // Communicated with the container. Just what we did in springBoot.
         Alien obj = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
@@ -35,16 +35,16 @@ public class App
 }
 
 
-// Error : BreanFactory not initialized or already closed.....
+// 1. Error : BreanFactory not initialized or already closed.....
 
-// So, from the error is shows. "Alien obj = (Alien) context.getBean("alien");" it has problem with this line. Not above that. Spring was not able to find this object in the container.
-// So, we have to tell spring that it is your responsibility to manage this Alien class.
-// And there are many ways to talk to our spring. 1. Java based configuration, 2. XML , 3. Annotations
-// We will use XML here.
+// 2.  So, from the error is shows. "Alien obj = (Alien) context.getBean("alien");" it has problem with this line. Not above that. Spring was not able to find this object in the container.
+// 3. So, we have to tell spring that it is your responsibility to manage this Alien class.
+// 4. And there are many ways to talk to our spring. 1. Java based configuration, 2. XML , 3. Annotations
+// 5. We will use XML here.
 
-// Step 1 : we create XML file but where?
-// Now since, we are using classpathXMLapplicationContext() it will look for classpath. And in classpath there is a main and let's create a folder called Resource. So it will look for it. And in that create XML file. I have name is Spring.xml.
-// Now mention that in classpathXMLapplicationContext("_yourxmlfilename_");
-// Go to your created XML file. (make sure that resource folder the part of main folder)
+// 6. Step 1 : we create XML file but where?
+// 7. Now since, we are using classpathXMLapplicationContext() it will look for classpath. And in classpath there is a main and let's create a folder called Resource. So it will look for it. And in that create XML file. I have name is Spring.xml.
+// 8. Now mention that in classpathXMLapplicationContext("_yourxmlfilename_");
+// 9. VISIT your created XML file. (make sure that resource folder the part of main folder)
 
-// SO, these are the things that we have to do, just to print one line of code in spring. WOW!!!
+// 10. SO, these are the things that we have to do, just to print one line of code in spring. WOW!!!
