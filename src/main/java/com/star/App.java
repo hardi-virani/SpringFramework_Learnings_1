@@ -1,5 +1,5 @@
 // Check by running code at everystage to not have major bug in future.
-// 1. Since this is springframework, we are going to learn what going on behind the scene.
+// Since this is springframework, we are going to learn what going on behind the scene.
 
 // Tech work
 // Step 1 : I want my spring to create this (obj) object for me. And we already saw how simple it is in springBoot, but NOW we are going to see what's happening behind the scene, basically in springFramework.
