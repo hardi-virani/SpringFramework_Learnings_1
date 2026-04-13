@@ -2,17 +2,18 @@
 // 1. Since this is springframework, we are going to learn what going on behind the scene.
 
 // Tech work
-// Step 1 :  I want my spring to create this (obj) object for me. And we already saw how simple it is in springBoot, but NOW we are going to see what's happening behind the scene, basically in springFramework.
+// Step 1 : I want my spring to create this (obj) object for me. And we already saw how simple it is in springBoot, but NOW we are going to see what's happening behind the scene, basically in springFramework.
 // Step 2 : As we know we have IOC container where spring stored and managed the objects. We will make that first, So that spring can stored it.
 // Step 3 : we need container and it the part of the springframework not java. So we need to check some dependecies basically a spring library which is in fild "pom.xml".
 // Step 4 : Just search in broweser MVN repoitry search for spring context and go with second last version because it is not constantly updating. So pretty easy to work with while learning. Copy the dependency and paste it in pom.xml. And after that there will be loadMaven changes appear at the upper right in your code space just load it. And in enternal libraries, you will be seen maven loads, spring dependencies.
 // Step 5 : In future we will work with MVC and JPA, for that we need to get more other dependencies, there are just we need to work with DI using springframework, we need these dependencies only.
 // Step 6 : Now back to our topic of making the container, and for that we already know from springBoot that we need ApplicationContext because that will be our way to reach to IOC container.
-// Step 7 :
+// Step 7 : Check the code comment.
 
 package com.star;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Hello world!
@@ -22,8 +23,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext context
-        Alien obj = new Alien();
+        //GPT : only doubt is what we created? Container or the told the spring to create the object and just because told spring to create and manage it, it by default create the container to store it, or it is already present in springframework.
+
+        ApplicationContext context = new ClassPathXmlApplicationContext(); // Step 7 : Created the object and reaching to the container.
+
+        // Communicated with the container. Just what we did in springBoot.
+        Alien obj = (Alien) context.getBean("alien"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
         obj.code();
 
     }
