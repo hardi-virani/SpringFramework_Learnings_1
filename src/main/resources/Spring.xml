@@ -18,6 +18,8 @@
 
     <bean id = "thisIstheID" class = "com.star.Alien"> </bean>
 
+    <bean class = "com.star.Laptop"> </bean>
+
 
 </beans>
 
