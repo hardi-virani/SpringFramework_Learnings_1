@@ -53,3 +53,5 @@ public class App
 
 
 //ANOTHER DAY!!
+// So see when the object is created, in line 29 or 32?
+//Okay, so I made a constructor in Alien file. And simply printed "object created".
