@@ -18,7 +18,8 @@
 
     <bean id = "thisIstheID" class = "com.star.Alien"> </bean>
 
-    <bean class = "com.star.Laptop"> </bean>
+
+    <bean id = "Lap" class = "com.star.Laptop"> </bean> <!--    You might be wondering where did thid ID "Lap" came from because we didn't mention, well it have nothing to do with ID, its just the package path we have mention (if you remove the ID it will still work), spring is now repsonsible for the laptop class and making the obj from it and because there is no obj or obj ref. in main class it is not yet created just conrsuctor running because ofcourse when visiting the file the constructor will run.-->
 
 
 </beans>
