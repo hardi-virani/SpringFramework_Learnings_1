@@ -60,3 +60,9 @@ public class App
 // Here constructor in Alien file is the proof that it went to that file. because it is printing the constructor output even when we comment the 32 & 33 line.
 // This is the basic flow of spring.
 
+// Scope
+// by default -> Singleton, and another is protoype there are many others which will be discuss in future.
+// So for the scope it is because, how many different object ref. you make in main class, those all with reffee or point to one obj, because in XML we have mention that, but if we want 2 different objects. There are of course 2 ways.
+//1. you resuse the code of bean and mention the ID and stuff like that and you get the 2 objs. But that would ineffiecient.
+// Another way is scope, you mention the scope in the bean and name is prototype you get 2 different objects, rather than reusing the same code again and again. There many other scopes but we are using this only. By default it is singleton, which we have been using till now, 1 object.
+// Practical usage will be done afterwards.
