@@ -36,8 +36,6 @@ public class App
 
 
         Alien obj2 = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
-        obj2.age = 21;
-
         System.out.println(obj2.age);
 
     }
