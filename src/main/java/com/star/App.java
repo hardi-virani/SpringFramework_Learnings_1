@@ -42,7 +42,7 @@ public class App
 }
 
 
-// 1. Error : BreanFactory not initialized or already closed.....
+// 1. Error : BeanFactory not initialized or already closed.....
 
 // 2.  So, from the error is shows. "Alien obj = (Alien) context.getBean("alien");" it has problem with this line. Not above that. Spring was not able to find this object in the container.
 // 3. So, we have to tell spring that it is your responsibility to manage this Alien class.
