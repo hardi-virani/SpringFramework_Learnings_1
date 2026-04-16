@@ -30,19 +30,19 @@ public class App
 
         // Communicated with the container. Just what we did in springBoot.
         Alien obj1 = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
-        obj1.age = 21;
+//        obj1.setAge(21); // What if i don't want to assign the value here.
+        System.out.println(obj1.getAge());
+//        obj1.code();
 
-        System.out.println(obj1.age);
 
-
-        Alien obj2 = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
-        System.out.println(obj2.age);
+//        Alien obj2 = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
+//        System.out.println(obj2.age);
 
     }
 }
 
 
-// 1. Error : BreanFactory not initialized or already closed.....
+// 1. Error : BeanFactory not initialized or already closed.....
 
 // 2.  So, from the error is shows. "Alien obj = (Alien) context.getBean("alien");" it has problem with this line. Not above that. Spring was not able to find this object in the container.
 // 3. So, we have to tell spring that it is your responsibility to manage this Alien class.
@@ -72,3 +72,16 @@ public class App
 //1. you resuse the code of bean and mention the ID and stuff like that and you get the 2 objs. But that would ineffiecient.
 // Another way is scope, you mention the scope in the bean and name is prototype you get 2 different objects, rather than reusing the same code again and again. There many other scopes but we are using this only. By default it is singleton, which we have been using till now, 1 object.
 // Practical usage will be done afterwards.
+
+
+// ANOTHER DAY - SETTER INJECTION !
+// We created the setter and getter method in alien class.
+// obj1.setAge(21); // What if i don't want to assign the value here in main class.
+// by default we will get age 0.
+// So for to set the age, we will use setter injection (we already saw DI in springBoot).
+// We will go to xml and inject the value in our bean.
+// <property name="age" value="21"></property>  used property because private int age; age is the property. And this is how we inject our value to set age.
+// And to know that we have set the age through this injection is we can print that a line in setter method and we can get it.
+// Even though we have comment line 33 we are still getting the age value 21 and we saw in the output "object created" "setter is called" "Laptop object created" "21".
+
+
