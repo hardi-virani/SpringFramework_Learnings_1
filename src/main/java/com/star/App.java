@@ -34,6 +34,9 @@ public class App
         System.out.println(obj1.getAge());
 //        obj1.code();
 
+        //Ref Attribute prac
+        Alien objref = (Alien) context.getBean("thisIstheID");
+        objref.code();
 
 //        Alien obj2 = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
 //        System.out.println(obj2.age);
@@ -85,4 +88,5 @@ public class App
 // Even though we have comment line 33 we are still getting the age value 21 and we saw in the output "object created" "setter is called" "Laptop object created" "21".
 
 
+//Reference Attribute
 
