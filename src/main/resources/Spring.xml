@@ -44,7 +44,7 @@
 
         <property name="age" value="21"></property>
 <!--        You see here we have same name and ref, however spring should be smart enough to differ these two.-->
-<!--        And whenever we comment this below line it shows error, why because it created the wire between the Laptop and the Alien through another bean given below and this property line(exactly next line). What if we need this wiring to be done automatically? We can do that in spring -->
+<!--        And whenever we comment this below line it shows error, why because it created the wire between the Laptop and the Alien through another bean given below and this property line(exactly next line). What if we need this wiring to be done automatically?-->
 <!--        <property name="com" ref="com"></property>-->
 
 
