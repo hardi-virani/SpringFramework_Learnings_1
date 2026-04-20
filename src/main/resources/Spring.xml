@@ -22,9 +22,15 @@
 
 
     </bean>
+<!--    Whenver we are using byName it will search the name "com" which is present in alien and which will our ID as well.-->
 
-<!--    <bean id = "com1" class = "com.star.Laptop"> </bean>-->
-    <bean id = "com" class = "com.star.Desktop"> </bean>
+<!--    So whenever we use byType autowire, we can only use one of the type not both at the same time, and one thing to notice here is that we have use id different, which is not present anywhere but still it will work because we used byType.-->
+<!--    Either Desktop or Laptop will work not both-->
+    <bean id = "com1" class = "com.star.Laptop"> </bean>
+    <bean id = "com2" class = "com.star.Desktop"> </bean>
+
+
+
 
 
 </beans>
