@@ -1,5 +1,7 @@
 package com.star;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
 
     private int age;  //These are called primitive variables.
@@ -9,6 +11,12 @@ public class Alien {
 
     public Alien() {
         System.out.println("Object created");
+    }
+
+    @ConstructorProperties({"age", "lid"})
+    public Alien(int age, Laptop lid) {
+        this.age = age;
+        this.lid = lid;
     }
 
     // Age getter setter

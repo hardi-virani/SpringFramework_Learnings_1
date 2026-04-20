@@ -19,8 +19,33 @@
 <!--    <bean id = "thisIstheID" class = "com.star.Alien" scope="prototype"> </bean>-->
 
     <bean id = "thisIstheID" class = "com.star.Alien">
-        <property name="age" value="21"></property>
-        <property name="lap" ref="lap"></property>
+<!--        <property name="age" value="21"></property>-->
+<!--        <property name="lap" ref="lap"></property>-->
+
+<!--        this is whenever we want to inject the constructor in our spring.-->
+<!--        if we change the order of value and ref it will show us error because we need to pass the same order as it is in parameterized constructor-->
+<!--        <constructor-arg value="21"></constructor-arg>-->
+<!--        <constructor-arg ref="lap"></constructor-arg>-->
+
+
+<!--        So avoid the order mistake we have many ways this is 1st-->
+<!--        <constructor-arg type = "com.star.Laptop" ref="lap"></constructor-arg>-->
+<!--        <constructor-arg type="int" value="21"></constructor-arg>-->
+
+        <!--        2nd way is-->
+        <!--        <constructor-arg index="1" ref="lap"></constructor-arg>-->
+        <!--        <constructor-arg index="0" value="21"></constructor-arg>-->
+
+<!--        3rd and the preffered way of maintainig the order is : -->
+<!--        So when we are using this name way, we have to use the annotation in the alien file which is @constructorProperties-->
+        <constructor-arg name="age" value="21"></constructor-arg>
+        <constructor-arg name = "lid" ref="lap"></constructor-arg>
+
+
+
+
+
+
     </bean>
 
     <bean id = "lap" class = "com.star.Laptop"> </bean> <!--    You might be wondering where did thid ID "Lap" came from because we didn't mention, well it have nothing to do with ID, its just the package path we have mention (if you remove the ID it will still work), spring is now repsonsible for the laptop class and making the obj from it and because there is no obj or obj ref. in main class it is not yet created just conrsuctor running because ofcourse when visiting the file the constructor will run.-->
