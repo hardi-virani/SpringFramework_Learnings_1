@@ -18,23 +18,8 @@
 
 <!--    <bean id = "thisIstheID" class = "com.star.Alien" scope="prototype"> </bean>-->
 
-    <bean id = "thisIstheID" class = "com.star.Alien" autowire="byName">
-<!--        <property name="age" value="21"></property>-->
-<!--        <property name="lap" ref="lap"></property>-->
+    <bean id = "thisIstheID" class = "com.star.Alien" autowire="byName"> The
 
-<!--        this is whenever we want to inject the constructor in our spring.-->
-<!--        if we change the order of value and ref it will show us error because we need to pass the same order as it is in parameterized constructor-->
-<!--        <constructor-arg value="21"></constructor-arg>-->
-<!--        <constructor-arg ref="lap"></constructor-arg>-->
-
-
-<!--        So avoid the order mistake we have many ways this is 1st-->
-<!--        <constructor-arg type = "com.star.Laptop" ref="lap"></constructor-arg>-->
-<!--        <constructor-arg type="int" value="21"></constructor-arg>-->
-
-        <!--        2nd way is-->
-        <!--        <constructor-arg index="1" ref="lap"></constructor-arg>-->
-        <!--        <constructor-arg index="0" value="21"></constructor-arg>-->
 
 <!--        3rd and the preffered way of maintainig the order is : -->
 <!--        So when we are using this name way, we have to use the annotation in the alien file which is @constructorProperties-->
