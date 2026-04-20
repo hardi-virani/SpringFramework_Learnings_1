@@ -18,7 +18,7 @@
 
 <!--    <bean id = "thisIstheID" class = "com.star.Alien" scope="prototype"> </bean>-->
 
-    <bean id = "thisIstheID" class = "com.star.Alien">
+    <bean id = "thisIstheID" class = "com.star.Alien" autowire="byName">
 <!--        <property name="age" value="21"></property>-->
 <!--        <property name="lap" ref="lap"></property>-->
 
