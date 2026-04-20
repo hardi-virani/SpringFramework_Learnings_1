@@ -4,10 +4,10 @@ import java.beans.ConstructorProperties;
 
 public class Alien {
 
-    private int age;  //These are called primitive variables.
-//  private Laptop lid = new Laptop(); But this is not how spring works. This what i as a person created. So what should we do get this lid object, we need to inject this lid reference through xml.
+    private int age;
+//  private Laptop lid = new Laptop();
 
-//    private Laptop lid; // These are called reference, and of course because it is from Laptop class and being declared in Alien class. And also change it in construtor and everywhere.
+//    private Laptop lid;
 
     //Because we have created the interface called computer we can directly write like this. Instead of Laptop Lid
     private Computer com;

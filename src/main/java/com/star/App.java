@@ -26,10 +26,10 @@ public class App
     public static void main( String[] args )
     {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml"); // Step 7 : Created the spring container. And the configuration xml file is mentioned in the container ("Spring.xml"). // 11. And after editing xml file, spring knows what obj it needs from which class.
+        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 
-        // Communicated with the container. Just what we did in springBoot.
-        Alien obj1 = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
+
+        Alien obj1 = (Alien) context.getBean("thisIstheID");
 //        obj1.setAge(21); // What if i don't want to assign the value here.
         System.out.println(obj1.getAge());
 //        obj1.code();
@@ -38,55 +38,11 @@ public class App
         Alien objref = (Alien) context.getBean("thisIstheID");
         objref.code();
 
-//        Alien obj2 = (Alien) context.getBean("thisIstheID"); // The reason of writing "(Alien)" in this line is because spring is giving the type of obj from the container, so i need to write what type of object i want and that is Alien, so just need to typecast that.
+//        Alien obj2 = (Alien) context.getBean("thisIstheID");
 //        System.out.println(obj2.age);
 
     }
 }
 
 
-// 1. Error : BeanFactory not initialized or already closed.....
-
-// 2.  So, from the error is shows. "Alien obj = (Alien) context.getBean("alien");" it has problem with this line. Not above that. Spring was not able to find this object in the container.
-// 3. So, we have to tell spring that it is your responsibility to manage this Alien class.
-// 4. And there are many ways to talk to our spring. 1. Java based configuration, 2. XML , 3. Annotations
-// 5. We will use XML here.
-
-// 6. Step 1 : we create XML file but where?
-// 7. Now since, we are using classpathXMLapplicationContext() it will look for classpath. And in classpath there is a main and let's create a folder called Resource. So it will look for it. And in that create XML file. I have name is Spring.xml.
-// 8. Now mention that in classpathXMLapplicationContext("_yourxmlfilename_");
-// 9. VISIT your created XML file. (make sure that resource folder the part of main folder)
-
-// 10. SO, these are the things that we have to do, just to print one line of code in spring. WOW!!!
-
-
-
-//ANOTHER DAY!!
-// So see when the object is created, in line 29 or 32?
-//Okay, so I made a constructor in Alien file. And simply printed "object created".
-
-//SO, rather than too much detail, I will expplain the basic flow, so when i mention the XML file in line 29, it will visit our XML file and then check that we have asked spring to create the container and bean and it will create it and then iwe have mention Alien object with ID and package and class name and then it will visit that file get the obj and then print it.
-// Here constructor in Alien file is the proof that it went to that file. because it is printing the constructor output even when we comment the 32 & 33 line.
-// This is the basic flow of spring.
-
-// Scope
-// by default -> Singleton, and another is protoype there are many others which will be discuss in future.
-// So for the scope it is because, how many different object ref. you make in main class, those all with reffee or point to one obj, because in XML we have mention that, but if we want 2 different objects. There are of course 2 ways.
-//1. you resuse the code of bean and mention the ID and stuff like that and you get the 2 objs. But that would ineffiecient.
-// Another way is scope, you mention the scope in the bean and name is prototype you get 2 different objects, rather than reusing the same code again and again. There many other scopes but we are using this only. By default it is singleton, which we have been using till now, 1 object.
-// Practical usage will be done afterwards.
-
-
-// ANOTHER DAY - SETTER INJECTION !
-// We created the setter and getter method in alien class.
-// obj1.setAge(21); // What if i don't want to assign the value here in main class.
-// by default we will get age 0.
-// So for to set the age, we will use setter injection (we already saw DI in springBoot).
-// We will go to xml and inject the value in our bean.
-// <property name="age" value="21"></property>  used property because private int age; age is the property. And this is how we inject our value to set age.
-// And to know that we have set the age through this injection is we can print that a line in setter method and we can get it.
-// Even though we have comment line 33 we are still getting the age value 21 and we saw in the output "object created" "setter is called" "Laptop object created" "21".
-
-
-//Reference Attribute
 
