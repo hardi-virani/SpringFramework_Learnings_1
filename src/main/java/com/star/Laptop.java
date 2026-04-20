@@ -2,12 +2,12 @@ package com.star;
 
 public class Laptop implements Computer {
     public Laptop() {
-        System.out.println("Laptop object created");
+//        System.out.println("Laptop object created");
     }
 
     @Override
     public void compile() {
-        System.out.println("Compiling");
+        System.out.println("Compiling from Laptop");
     }
 
 }

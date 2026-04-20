@@ -38,9 +38,14 @@
 
 <!--        3rd and the preffered way of maintainig the order is : -->
 <!--        So when we are using this name way, we have to use the annotation in the alien file which is @constructorProperties-->
-        <constructor-arg name="age" value="21"></constructor-arg>
-        <constructor-arg name = "lid" ref="lap"></constructor-arg>
+<!--        <constructor-arg name="age" value="21"></constructor-arg>-->
+<!--        <constructor-arg name = "lid" ref="lap"></constructor-arg>-->
 
+
+        <property name="age" value="21"></property>
+<!--        You see here we have same name and ref, however spring should be smart enough to differ these two.-->
+<!--        And whenever we comment this below line it shows error, why because it created the wire between the Laptop and the Alien through another bean given below and this property line(exactly next line). What if we need this wiring to be done automatically? -->
+<!--        <property name="com" ref="com"></property>-->
 
 
 
@@ -48,7 +53,7 @@
 
     </bean>
 
-    <bean id = "lap" class = "com.star.Laptop"> </bean> <!--    You might be wondering where did thid ID "Lap" came from because we didn't mention, well it have nothing to do with ID, its just the package path we have mention (if you remove the ID it will still work), spring is now repsonsible for the laptop class and making the obj from it and because there is no obj or obj ref. in main class it is not yet created just conrsuctor running because ofcourse when visiting the file the constructor will run.-->
+    <bean id = "com" class = "com.star.Laptop"> </bean> <!--    You might be wondering where did thid ID "Lap" came from because we didn't mention, well it have nothing to do with ID, its just the package path we have mention (if you remove the ID it will still work), spring is now repsonsible for the laptop class and making the obj from it and because there is no obj or obj ref. in main class it is not yet created just conrsuctor running because ofcourse when visiting the file the constructor will run.-->
 
 
 </beans>
