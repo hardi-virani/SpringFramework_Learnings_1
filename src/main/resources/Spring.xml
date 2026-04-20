@@ -5,8 +5,8 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-
-    <bean id = "thisIstheID" class = "com.star.Alien" autowire="byName"> The
+<!--    I have added the autowire here : "byName" we also have the com var in Alien and also in id.-->
+    <bean id = "thisIstheID" class = "com.star.Alien" autowire="byName">
 
 
 <!--        <constructor-arg name="age" value="21"></constructor-arg>-->
@@ -21,11 +21,10 @@
 
 
 
-
-
     </bean>
 
-    <bean id = "com" class = "com.star.Laptop"> </bean>
+<!--    <bean id = "com1" class = "com.star.Laptop"> </bean>-->
+    <bean id = "com" class = "com.star.Desktop"> </bean>
 
 
 </beans>
