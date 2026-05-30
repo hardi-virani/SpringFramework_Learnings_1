@@ -13,7 +13,7 @@
 <!--        <constructor-arg name = "lid" ref="lap"></constructor-arg>-->
 
 
-        <property name="age" value="21"></property>
+        <property name="age" value="21"></property>>
 <!--        <property name="com" ref="com1"></property>-->
 
 <!--        You see here we have same name and ref, however spring should be smart enough to differ these two.-->
