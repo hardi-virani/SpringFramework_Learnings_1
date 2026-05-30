@@ -2,7 +2,7 @@ package com.star;
 
 public class Laptop implements Computer {
     public Laptop() {
-//        System.out.println("Laptop object created");
+        System.out.println("Laptop object created");
     }
 
     @Override

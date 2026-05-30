@@ -14,7 +14,7 @@
 
 
         <property name="age" value="21"></property>
-<!--        <property name="com" ref="com1"></property>-->
+        <property name="com" ref="com2"></property>
 
 <!--        You see here we have same name and ref, however spring should be smart enough to differ these two.-->
 <!--        And whenever we comment this below line it shows error, why because it created the wire between the Laptop and the Alien through another bean given below and this property line(exactly next line). What if we need this wiring to be done automatically?-->
@@ -27,8 +27,8 @@
 
 <!--    So whenever we use byType autowire, we can only use one of the type not both at the same time, and one thing to notice here is that we have use id different, which is not present anywhere but still it will work because we used byType.-->
 <!--    Either Desktop or Laptop will work, not both-->
-    <bean id = "com1" class = "com.star.Laptop"> </bean>
-    <bean id = "com2" class = "com.star.Desktop"> </bean> <!--  com1 does not exist at all. -->
+    <bean id = "com1" class = "com.star.Laptop" primary="true" > </bean>
+    <bean id = "com2" class = "com.star.Desktop" lazy-init="true"> </bean> <!--  com1 does not exist at all. -->
 
 
 
