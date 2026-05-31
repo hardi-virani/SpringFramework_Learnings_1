@@ -31,7 +31,7 @@ public class App
     {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Desktop dt = context.getBean("Beast",Desktop.class);
+        Desktop dt = context.getBean(Desktop.class);
         dt.compile();
 
 

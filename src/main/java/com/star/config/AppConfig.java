@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig  {
 
-    @Bean (name = {"Desktop1", "Beast", "RacingCar"})
+    @Bean //(name = {"Desktop1", "Beast", "RacingCar"})
     public Desktop desktop() {
         return new Desktop();
     }
