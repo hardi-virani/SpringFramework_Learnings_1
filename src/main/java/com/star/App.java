@@ -25,21 +25,21 @@ public class App
 {
     public static void main( String[] args )
     {
-
-        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
-
-
-        Alien obj1 = (Alien) context.getBean("thisIstheID");
-//        obj1.setAge(21); // What if i don't want to assign the value here.
-        System.out.println(obj1.getAge());
-//        obj1.code();
-
-        //Ref Attribute prac
-        Alien objref = (Alien) context.getBean("thisIstheID");
-        objref.code();
-
-//        Alien obj2 = (Alien) context.getBean("thisIstheID");
-//        System.out.println(obj2.age);
+//
+//        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+//
+//
+//        Alien obj1 = (Alien) context.getBean("thisIstheID");
+////        obj1.setAge(21); // What if i don't want to assign the value here.
+//        System.out.println(obj1.getAge());
+////        obj1.code();
+//
+//        //Ref Attribute prac
+//        Alien objref = (Alien) context.getBean("thisIstheID");
+//        objref.code();
+//
+////        Alien obj2 = (Alien) context.getBean("thisIstheID");
+////        System.out.println(obj2.age);
 
     }
 }
