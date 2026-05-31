@@ -1,6 +1,10 @@
 package com.star;
 
+import org.springframework.stereotype.Component;
+
 import java.beans.ConstructorProperties;
+
+@Component
 
 public class Alien {
 
