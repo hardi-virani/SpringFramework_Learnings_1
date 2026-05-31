@@ -1,5 +1,7 @@
 package com.star;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
@@ -14,6 +16,7 @@ public class Alien {
 //    private Laptop lid;
 
     //Because we have created the interface called computer we can directly write like this. Instead of Laptop Lid
+//    @Autowired
     private Computer com;
 
     public Alien() {
@@ -50,7 +53,9 @@ public class Alien {
         return com;
     }
 
-    public void setCom(Computer com) {
+    @Autowired
+    @Qualifier("desktop") //or @Qualifier("laptop")
+    public void setCom(Computer com)  {
         this.com = com;
     }
 
